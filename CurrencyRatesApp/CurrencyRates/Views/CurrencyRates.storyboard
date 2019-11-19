@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Currency Pairs Table View Controller-->
+        <scene sceneID="B3r-Ui-M5n">
+            <objects>
+                <tableViewController storyboardIdentifier="CurrencyPairsTableViewController" id="bGp-JQ-BqQ" customClass="CurrencyPairsTableViewController" customModule="CurrencyRatesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5jM-hF-yZ5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AddCurrencyPairCell" rowHeight="88" id="JKq-Aa-rtB" userLabel="AddCurrencyPairCell" customClass="AddCurrencyPairCell" customModule="CurrencyRatesApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="88"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JKq-Aa-rtB" id="2G9-Pi-mht">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="d8Y-TM-332">
+                                            <rect key="frame" x="18" y="34" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="X3U-4U-Xap"/>
+                                                <constraint firstAttribute="height" constant="40" id="xsG-Xn-xhV"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add currency pair" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBY-Ca-eBR">
+                                            <rect key="frame" x="74" y="44" width="129" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" name="CurrencyMainColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="UBY-Ca-eBR" firstAttribute="centerY" secondItem="d8Y-TM-332" secondAttribute="centerY" id="9ee-qk-G6r"/>
+                                        <constraint firstItem="d8Y-TM-332" firstAttribute="leading" secondItem="2G9-Pi-mht" secondAttribute="leading" constant="18" id="9ui-mb-3zK"/>
+                                        <constraint firstAttribute="bottom" secondItem="d8Y-TM-332" secondAttribute="bottom" constant="14" id="LBI-40-DW7"/>
+                                        <constraint firstItem="UBY-Ca-eBR" firstAttribute="leading" secondItem="d8Y-TM-332" secondAttribute="trailing" constant="16" id="iwW-Kr-uLF"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CurrencyPairTableViewCell" rowHeight="94" id="MHe-1o-tPw" userLabel="CurrencyPairCell" customClass="CurrencyPairTableViewCell" customModule="CurrencyRatesApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="116" width="375" height="94"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MHe-1o-tPw" id="va8-4K-d5E">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 EUR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9I-2O-CYm">
+                                            <rect key="frame" x="17" y="24" width="54" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Euro" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aP4-8N-f2v">
+                                            <rect key="frame" x="16" y="52" width="32" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" systemColor="placeholderTextColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCV-P4-PhN">
+                                            <rect key="frame" x="289" y="24" width="49" height="24"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="70,15">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="system" size="20"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Russian Ruble · RUB" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojH-dc-ccC">
+                                            <rect key="frame" x="230" y="53" width="131" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" systemColor="placeholderTextColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5B-vZ-9d4" userLabel="Right additional title">
+                                            <rect key="frame" x="338" y="30" width="17" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="aP4-8N-f2v" firstAttribute="leading" secondItem="va8-4K-d5E" secondAttribute="leading" constant="16" id="5UO-yH-4va"/>
+                                        <constraint firstAttribute="trailing" secondItem="ojH-dc-ccC" secondAttribute="trailing" constant="14" id="Fxk-5s-Zky"/>
+                                        <constraint firstAttribute="bottom" secondItem="aP4-8N-f2v" secondAttribute="bottom" constant="24" id="HJ0-24-5U0"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="b5B-vZ-9d4" secondAttribute="trailing" constant="4" id="Ljb-kt-iSs"/>
+                                        <constraint firstItem="f9I-2O-CYm" firstAttribute="top" secondItem="va8-4K-d5E" secondAttribute="top" constant="24" id="b6z-MN-tZv"/>
+                                        <constraint firstAttribute="bottom" secondItem="ojH-dc-ccC" secondAttribute="bottom" constant="24" id="dxO-hh-GwU"/>
+                                        <constraint firstItem="ojH-dc-ccC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aP4-8N-f2v" secondAttribute="trailing" constant="8" id="fBv-EB-ID4"/>
+                                        <constraint firstItem="f9I-2O-CYm" firstAttribute="leading" secondItem="va8-4K-d5E" secondAttribute="leading" constant="17" id="jCx-CC-Qzb"/>
+                                        <constraint firstItem="qCV-P4-PhN" firstAttribute="top" secondItem="va8-4K-d5E" secondAttribute="top" constant="24" id="jEf-lC-Roa"/>
+                                        <constraint firstItem="b5B-vZ-9d4" firstAttribute="top" secondItem="va8-4K-d5E" secondAttribute="topMargin" constant="19" id="tl2-ei-NZe"/>
+                                        <constraint firstItem="b5B-vZ-9d4" firstAttribute="leading" secondItem="qCV-P4-PhN" secondAttribute="trailing" id="yg3-v4-Soc"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="leftSubtitle" destination="aP4-8N-f2v" id="dsu-O6-xM5"/>
+                                    <outlet property="leftTitle" destination="f9I-2O-CYm" id="v9B-Nf-yhW"/>
+                                    <outlet property="rightAdditionalTitle" destination="b5B-vZ-9d4" id="qHL-Rp-bg6"/>
+                                    <outlet property="rightSubtitle" destination="ojH-dc-ccC" id="bJc-21-OMt"/>
+                                    <outlet property="rightTitle" destination="qCV-P4-PhN" id="YvQ-g8-JzG"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bGp-JQ-BqQ" id="qnN-Ay-iSn"/>
+                            <outlet property="delegate" destination="bGp-JQ-BqQ" id="edk-BW-6O7"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="placeholder" destination="4lJ-aN-QZW" id="G8J-xN-PCd"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vcF-Z8-Kje" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="4lJ-aN-QZW">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="256"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMX-D8-TT9">
+                            <rect key="frame" x="85" y="40.5" width="150" height="96"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="3aD-KW-q21"/>
+                                <constraint firstAttribute="height" constant="96" id="KzW-u6-8bY"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                            <inset key="titleEdgeInsets" minX="-50" minY="69" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="48" minY="0.0" maxX="44" maxY="38"/>
+                            <state key="normal" title="Add currency pair" image="Plus">
+                                <color key="titleColor" name="CurrencyMainColor"/>
+                            </state>
+                            <connections>
+                                <action selector="onAddPair:" destination="bGp-JQ-BqQ" eventType="touchUpInside" id="8Ce-F3-Ud0"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose currency pair to compare their live rates" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25S-44-dsj">
+                            <rect key="frame" x="35" y="136.5" width="250" height="33.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="250" id="kgu-8e-gGg"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" systemColor="placeholderTextColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="25S-44-dsj" firstAttribute="centerX" secondItem="4lJ-aN-QZW" secondAttribute="centerX" id="1yf-X4-mD6"/>
+                        <constraint firstItem="25S-44-dsj" firstAttribute="top" secondItem="lMX-D8-TT9" secondAttribute="bottom" id="HcW-Ne-BEf"/>
+                        <constraint firstItem="25S-44-dsj" firstAttribute="centerY" secondItem="4lJ-aN-QZW" secondAttribute="centerY" constant="25" id="V3S-sm-SDJ"/>
+                        <constraint firstItem="lMX-D8-TT9" firstAttribute="centerX" secondItem="4lJ-aN-QZW" secondAttribute="centerX" id="Xmu-Hc-xIU"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="5MA-GV-Tdm"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="-689" y="-165"/>
+        </scene>
+        <!--Сurrencies-->
+        <scene sceneID="7zh-CA-8OK">
+            <objects>
+                <tableViewController storyboardIdentifier="CurrenciesTableViewController" title="Сurrencies" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DRl-oG-rkW" customClass="CurrenciesTableViewController" customModule="CurrencyRatesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="56" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="K4c-EJ-tbh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="CurrencyTableViewCell" rowHeight="56" id="9a6-Y1-xel" userLabel="CurrencyCell" customClass="CurrencyTableViewCell" customModule="CurrencyRatesApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="56"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9a6-Y1-xel" id="sAU-uR-fle">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EUR" translatesAutoresizingMaskIntoConstraints="NO" id="BdX-yj-hMA">
+                                            <rect key="frame" x="16" y="16" width="24" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="4vA-vf-YJL"/>
+                                                <constraint firstAttribute="width" constant="24" id="810-Ti-vTZ"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EUR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrr-99-be1">
+                                            <rect key="frame" x="56" y="18" width="31" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Euro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESb-ga-AZt">
+                                            <rect key="frame" x="107" y="18.5" width="33" height="19"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="BdX-yj-hMA" firstAttribute="centerY" secondItem="sAU-uR-fle" secondAttribute="centerY" id="2e6-PX-ysN"/>
+                                        <constraint firstItem="BdX-yj-hMA" firstAttribute="leading" secondItem="sAU-uR-fle" secondAttribute="leadingMargin" id="PIQ-Zq-DWZ"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="ESb-ga-AZt" secondAttribute="trailing" id="epF-Xa-pY7"/>
+                                        <constraint firstItem="nrr-99-be1" firstAttribute="leading" secondItem="BdX-yj-hMA" secondAttribute="trailing" constant="16" id="iSq-Za-N7j"/>
+                                        <constraint firstItem="ESb-ga-AZt" firstAttribute="centerY" secondItem="sAU-uR-fle" secondAttribute="centerY" id="nyu-tS-k1F"/>
+                                        <constraint firstItem="ESb-ga-AZt" firstAttribute="leading" secondItem="nrr-99-be1" secondAttribute="trailing" constant="20" id="pln-nD-YCH"/>
+                                        <constraint firstItem="nrr-99-be1" firstAttribute="centerY" secondItem="sAU-uR-fle" secondAttribute="centerY" id="zI3-6r-uuy"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bankCode" destination="nrr-99-be1" id="vhS-qQ-zuA"/>
+                                    <outlet property="icon" destination="BdX-yj-hMA" id="sBL-EX-XID"/>
+                                    <outlet property="name" destination="ESb-ga-AZt" id="woR-HV-KEJ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="DRl-oG-rkW" id="mcu-0U-UEP"/>
+                            <outlet property="delegate" destination="DRl-oG-rkW" id="YTZ-xi-6pu"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="Pkm-56-3zu"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TbL-w3-3c5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="25" y="-165"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="EUR" width="410" height="411"/>
+        <image name="Plus" width="80" height="80"/>
+        <namedColor name="CurrencyMainColor">
+            <color red="0.0" green="0.45899999141693115" blue="0.92100000381469727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
